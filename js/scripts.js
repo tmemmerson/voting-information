@@ -1,9 +1,10 @@
-var yourAge = prompt("Please enter your age: ")
+$(document).ready(function() {
+  const age = parseInt(prompt("How old are you?"));
 
-if (yourAge >= 18) {
-    alert("Vote here!");
-    document.getElementById("content").style.display = "block";
-} else {
-    alert("You are not legally of age yet. Here are some resources though");
-    location.href = ("../html/index.html");
-}
+  if (age >= 18) {
+    $('#of-age').show();
+    
+  } else {
+    $('#under-age').show();
+  }
+});
